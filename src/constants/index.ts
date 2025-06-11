@@ -5,6 +5,10 @@ export const extensionIconPaths: Record<string, string> = {
   js: "icons/javascript",
   ts: "icons/typescript",
   html: "icons/html",
+  gitignore:'icons/git',
+  json:'icons/json',
+  md:'icons/readme',
+  svg:'icons/svg',
   // ** folders
   node_modules: "icons/folder-node",
   src: "icons/folder-src",

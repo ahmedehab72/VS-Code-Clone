@@ -34,45 +34,37 @@ const RenderFileIcon = ({ filename, isFolder, isOpen }: IProps) => {
 
 export default RenderFileIcon;
 
-
-
-
-
-
-
-
-
 /////////////////code without factoring ❌
 
-  // // file
-  //     if (extension === "tsx") return <ImageIcon src="icons/react_ts.svg" />;
-  //   if (extension === "jsx") return <ImageIcon src="icons/react.svg" />;
-  //   if (extension === "js") return <ImageIcon src="icons/javascript.svg" />;
-  //   if (extension === "ts") return <ImageIcon src="icons/typescript.svg" />;
-  //   if (extension === "html") return <ImageIcon src="icons/html.svg" />;
+// // file
+//     if (extension === "tsx") return <ImageIcon src="icons/react_ts.svg" />;
+//   if (extension === "jsx") return <ImageIcon src="icons/react.svg" />;
+//   if (extension === "js") return <ImageIcon src="icons/javascript.svg" />;
+//   if (extension === "ts") return <ImageIcon src="icons/typescript.svg" />;
+//   if (extension === "html") return <ImageIcon src="icons/html.svg" />;
 
-  //   // ** folder
-  //   if (extension === "node_modules" && isFolder)
-  //     return isOpen ? (
-  //       <ImageIcon src="icons/folder-node-open.svg" />
-  //     ) : (
-  //       <ImageIcon src="icons/folder-node.svg" />
-  //     );
-  //   if (extension === "public" && isFolder)
-  //     return isOpen ? (
-  //       <ImageIcon src="icons/folder-public-open.svg" />
-  //     ) : (
-  //       <ImageIcon src="icons/folder-public.svg" />
-  //     );
-  //   if (extension === "src" && isFolder)
-  //     return isOpen ? (
-  //       <ImageIcon src="icons/folder-src-open.svg" />
-  //     ) : (
-  //       <ImageIcon src="icons/folder-src.svg" />
-  //     );
-  //   if (extension === "components" && isFolder)
-  //     return isOpen ? (
-  //       <ImageIcon src="icons/folder-components-open.svg" />
-  //     ) : (
-  //       <ImageIcon src="icons/folder-components.svg" />
-  //     );
+//   // ** folder
+//   if (extension === "node_modules" && isFolder)
+//     return isOpen ? (
+//       <ImageIcon src="icons/folder-node-open.svg" />
+//     ) : (
+//       <ImageIcon src="icons/folder-node.svg" />
+//     );
+//   if (extension === "public" && isFolder)
+//     return isOpen ? (
+//       <ImageIcon src="icons/folder-public-open.svg" />
+//     ) : (
+//       <ImageIcon src="icons/folder-public.svg" />
+//     );
+//   if (extension === "src" && isFolder)
+//     return isOpen ? (
+//       <ImageIcon src="icons/folder-src-open.svg" />
+//     ) : (
+//       <ImageIcon src="icons/folder-src.svg" />
+//     );
+//   if (extension === "components" && isFolder)
+//     return isOpen ? (
+//       <ImageIcon src="icons/folder-components-open.svg" />
+//     ) : (
+//       <ImageIcon src="icons/folder-components.svg" />
+//     );

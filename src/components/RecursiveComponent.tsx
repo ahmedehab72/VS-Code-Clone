@@ -4,7 +4,10 @@ import RightArrowIcon from "./SVG/RightArrowIcon";
 import BottomArrowIcon from "./SVG/BottomArrowIcon";
 import RenderFileIcon from "./RenderFileIcon";
 import { useDispatch, useSelector } from "react-redux";
-import { setOpenedFileAction } from "../app/feature/fileTreeSlice";
+import {
+  setClickedFileAction,
+  setOpenedFileAction,
+} from "../app/feature/fileTreeSlice";
 import type { RootState } from "../app/store";
 import { doesFileObjectExist } from "../utils/functions";
 
@@ -12,10 +15,10 @@ interface IProps {
   fileTree: IFile;
 }
 const RecursiveComponent = ({ fileTree }: IProps) => {
-  const { id, name, isFolder, children } = fileTree;
+  const { id, name, isFolder, children, content } = fileTree;
   const dispatch = useDispatch();
   const { openedFiles } = useSelector((state: RootState) => state.treeSlice);
-  
+
   // states 🙌
   const [isOpen, setIsOpen] = useState<boolean>(true);
   const handleToggle = () => setIsOpen((prev) => !prev);
@@ -23,6 +26,13 @@ const RecursiveComponent = ({ fileTree }: IProps) => {
   // to prevent duplicate Opened file  (( file which already open when click again didn't execute))
   const onFileClicked = () => {
     const exist = doesFileObjectExist(openedFiles, id);
+    dispatch(
+      setClickedFileAction({
+        fileName: name,
+        fileContent: content,
+        activeTabId: id,
+      })
+    );
     if (exist) return;
     dispatch(setOpenedFileAction([...openedFiles, fileTree]));
   };
